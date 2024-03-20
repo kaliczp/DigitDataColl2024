@@ -19,3 +19,6 @@ plot(las, color = "Intensity", breaks = "quantile", bg = "white")
 ## Cross section
 p1 <- c(357937.8, 5324058)
 p2 <- c(359664.8, 5326529)
+
+las_tr <- clip_transect(las, p1, p2, width = 4, xz = TRUE)
+plot(las_tr)
