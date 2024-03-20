@@ -22,3 +22,12 @@ p2 <- c(359664.8, 5326529)
 
 las_tr <- clip_transect(las, p1, p2, width = 4, xz = TRUE)
 plot(las_tr)
+
+install.packages("ggplot2")
+library(ggplot2)
+
+ggplot(las_tr@data, aes(X,Z, color = Z)) + 
+  geom_point(size = 0.5) + 
+  coord_equal() + 
+  theme_minimal() +
+  scale_color_gradientn(colours = height.colors(50))
