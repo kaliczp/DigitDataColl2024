@@ -9,3 +9,13 @@ las <- readLAS("RAW_LiDAR_01.las", select = "xyz")
 ## ugyan az, mint a print las
 las
 las <-  readLAS("RAW_LiDAR_01.las", filter = "-keep_first -drop_z_below 170 -drop_z_above 200")
+las_check(las)
+plot(las)
+
+plot(las, color = "ScanAngleRank", bg = "white", axis = TRUE, legend = TRUE)
+
+plot(las, color = "Intensity", breaks = "quantile", bg = "white")
+
+## Cross section
+p1 <- c(357937.8, 5324058)
+p2 <- c(359664.8, 5326529)
