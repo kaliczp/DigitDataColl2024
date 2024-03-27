@@ -31,3 +31,12 @@ ggplot(las_tr@data, aes(X,Z, color = Z)) +
   coord_equal() + 
   theme_minimal() +
   scale_color_gradientn(colours = height.colors(50))
+
+## Osztályozás
+las <- classify_ground(las, algorithm = pmf(ws = 5, th = 3))
+
+## Osztályozás mintafájllal
+LASfile <- system.file("extdata", "Topography.laz", package="lidR")
+las <- readLAS(LASfile, select = "xyzrn")
+las <- classify_ground(las, algorithm = pmf(ws = 5, th = 3))
+plot(las)
