@@ -47,3 +47,11 @@ plot(las, color = "Classification", size = 3, bg = "white")
 ?pmf
 ?util_makeZhangParam
 util_makeZhangParam()
+util_makeZhangParam(
+       b = 2,
+       dh0 = 1,
+       dhmax = 3,
+       s = 1,
+       max_ws = 20,
+       exp = TRUE
+     )
