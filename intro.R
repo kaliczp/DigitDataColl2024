@@ -64,3 +64,9 @@ plot(las, color = "Classification")
 ## Count points
 summary(as.factor(las$Classification))
 sum(las$Classification > 1)
+
+## compare
+lasori <- readLAS(LASfile, select = "xyzrn")
+lasori <- classify_ground(lasori, algorithm = pmf(ws = 5, th = 3))
+dev.new()
+plot_crossection(lasori, p1 , p2, colour_by = factor(Classification))
