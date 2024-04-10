@@ -40,3 +40,5 @@ LASfile <- system.file("extdata", "Topography.laz", package="lidR")
 las <- readLAS(LASfile, select = "xyzrn")
 las <- classify_ground(las, algorithm = pmf(ws = 5, th = 3))
 plot(las)
+
+plot(las, color = "Classification", size = 3, bg = "white") 
