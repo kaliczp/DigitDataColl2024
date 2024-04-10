@@ -42,3 +42,8 @@ las <- classify_ground(las, algorithm = pmf(ws = 5, th = 3))
 plot(las)
 
 plot(las, color = "Classification", size = 3, bg = "white") 
+
+?classify_ground
+?pmf
+?util_makeZhangParam
+util_makeZhangParam()
