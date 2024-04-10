@@ -47,7 +47,9 @@ plot(las, color = "Classification", size = 3, bg = "white")
 ?pmf
 ?util_makeZhangParam
 util_makeZhangParam()
-util_makeZhangParam(
+
+## Own parameter
+ujPar <- util_makeZhangParam(
        b = 2,
        dh0 = 1,
        dhmax = 3,
@@ -55,3 +57,5 @@ util_makeZhangParam(
        max_ws = 20,
        exp = TRUE
      )
+las <- readLAS(LASfile, select = "xyzrn")
+las <- classify_ground(las, algorithm = pmf(ujPar$ws,ujPar$th))
