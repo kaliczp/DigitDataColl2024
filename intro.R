@@ -60,3 +60,7 @@ ujPar <- util_makeZhangParam(
 las <- readLAS(LASfile, select = "xyzrn")
 las <- classify_ground(las, algorithm = pmf(ujPar$ws,ujPar$th))
 plot(las, color = "Classification")
+
+## Count points
+summary(as.factor(las$Classification))
+
