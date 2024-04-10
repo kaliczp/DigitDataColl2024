@@ -63,4 +63,4 @@ plot(las, color = "Classification")
 
 ## Count points
 summary(as.factor(las$Classification))
-
+sum(las$Classification > 1)
