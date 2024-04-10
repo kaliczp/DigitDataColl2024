@@ -69,5 +69,6 @@ sum(las$Classification > 1)
 lasori <- readLAS(LASfile, select = "xyzrn")
 lasori <- classify_ground(lasori, algorithm = pmf(ws = 5, th = 3))
 dev.new()
-plot_crossection(lasori, p1 , p2, colour_by = factor(Classification))
+## plot saját paraméteres
+plot_crossection(las, p1 , p2, colour_by = factor(Classification))
 sum(lasori$Classification > 1)
