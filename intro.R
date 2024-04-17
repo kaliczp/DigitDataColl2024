@@ -72,3 +72,8 @@ dev.new()
 ## plot saját paraméteres
 plot_crossection(las, p1 , p2, colour_by = factor(Classification))
 sum(lasori$Classification > 1)
+
+## Custom filter
+ws <- seq(3, 12, 3)
+th <- seq(0.1, 1.5, length.out = length(ws))
+las <- classify_ground(las, algorithm = pmf(ws = ws, th = th))
