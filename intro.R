@@ -86,3 +86,9 @@ las@data$X[73393]
 sum(las@data$X > 273642)
 sum(!las@data$X > 273642)
 las@data$X[las@data$X > 273642]
+mean(las@data$Y)
+min(las@data$X)
+
+## CSF
+las <- classify_ground(las, algorithm = csf())
+summary(as.factor(las@data$Classification))
