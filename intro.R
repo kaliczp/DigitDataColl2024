@@ -84,3 +84,5 @@ tail(las@data$X)
 las@data$X > 273642
 las@data$X[73393]
 sum(las@data$X > 273642)
+sum(!las@data$X > 273642)
+las@data$X[las@data$X > 273642]
