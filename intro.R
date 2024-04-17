@@ -77,3 +77,7 @@ sum(lasori$Classification > 1)
 ws <- seq(3, 12, 3)
 th <- seq(0.1, 1.5, length.out = length(ws))
 las <- classify_ground(las, algorithm = pmf(ws = ws, th = th))
+
+## Elementary tests
+str(las)
+tail(las@data$X)
