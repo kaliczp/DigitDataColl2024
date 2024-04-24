@@ -19,3 +19,6 @@ plot_crossection <- function(las,
 
   return(p)
 }
+
+p1 <- c(273420, 5274455)
+p2 <- c(273570, 5274460)
