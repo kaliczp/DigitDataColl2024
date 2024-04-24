@@ -91,4 +91,8 @@ min(las@data$X)
 
 ## CSF
 las <- classify_ground(las, algorithm = csf())
+sum(las@data$Classification > 1)
 summary(as.factor(las@data$Classification))
+
+plot(las)
+plot(las, color = "Classification")
