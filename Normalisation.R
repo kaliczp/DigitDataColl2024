@@ -16,3 +16,7 @@ hist(filter_ground(nlas)$Z, # csak talajpont kiválasztás
      breaks = seq(-0.6, 0.6, 0.01), ## -0.6-tól 0.01 közökkel osztályok
      main = "", xlab = "Elevation") # Szépítés
 
+## Point clud norm
+nlas <- normalize_height(las, knnidw())
+hist(filter_ground(nlas)$Z, breaks = seq(-0.6, 0.6, 0.01), main = "", xlab = "Elevation")
+summary(filter_ground(nlas)$Z)
