@@ -20,3 +20,5 @@ hist(filter_ground(nlas)$Z, # csak talajpont kiválasztás
 nlas <- normalize_height(las, knnidw())
 hist(filter_ground(nlas)$Z, breaks = seq(-0.6, 0.6, 0.01), main = "", xlab = "Elevation")
 summary(filter_ground(nlas)$Z)
+nlas <- normalize_height(las, kriging())
+summary(filter_ground(nlas)$Z)
