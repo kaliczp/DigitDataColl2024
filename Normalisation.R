@@ -15,3 +15,4 @@ plot(nlas, size = 4, bg = "white")
 hist(filter_ground(nlas)$Z, # csak talajpont kiválasztás
      breaks = seq(-0.6, 0.6, 0.01), ## -0.6-tól 0.01 közökkel osztályok
      main = "", xlab = "Elevation") # Szépítés
+
