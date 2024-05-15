@@ -1,6 +1,7 @@
 ## Start
 library(lidR)
 library(ggplot2)
+library(terra)
 LASfile <- system.file("extdata", "Topography.laz", package="lidR")
 las <- readLAS(LASfile, select = "xyzrn")
 
