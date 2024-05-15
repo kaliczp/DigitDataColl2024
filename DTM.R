@@ -10,3 +10,7 @@ plot_dtm3d(dtm_tin, bg = "white")
 ## Export raster
 library(terra)
 writeRaster(dtm_tin,"dtm.tif")
+
+## IDW
+dtm_idw <- rasterize_terrain(las, algorithm = knnidw(k = 10L, p = 2))
+plot_dtm3d(dtm_idw, bg = "white") 
