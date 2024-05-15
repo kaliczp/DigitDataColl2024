@@ -96,3 +96,15 @@ summary(as.factor(las@data$Classification))
 
 plot(las)
 plot(las, color = "Classification")
+
+mycsf <- csf(sloop_smooth = TRUE, class_threshold = 1, cloth_resolution = 1, time_step = 1)
+las <- classify_ground(las, mycsf)
+plot_crossection(las, p1 = p1, p2 = p2, colour_by = factor(Classification))
+
+## Filter ground points
+gnd <- filter_ground(las)
+plot(gnd, size = 3, bg = "white")
+
+## MMC filter
+las <- classify_ground(las, mcc(1.5,0.3))
+plot_crossection(las, p1 = p1, p2 = p2, colour_by = factor(Classification))
