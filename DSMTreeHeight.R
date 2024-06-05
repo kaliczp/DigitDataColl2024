@@ -1,0 +1,5 @@
+library(lidR)
+library(ggplot2)
+LASfile <- system.file("extdata", "MixedConifer.laz", package ="lidR")
+las <- readLAS(LASfile)
+plot(las, size = 3, bg = "white")
