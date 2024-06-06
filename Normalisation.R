@@ -22,3 +22,7 @@ hist(filter_ground(nlas)$Z, breaks = seq(-0.6, 0.6, 0.01), main = "", xlab = "El
 summary(filter_ground(nlas)$Z)
 nlas <- normalize_height(las, kriging())
 summary(filter_ground(nlas)$Z)
+
+## Hybrid
+nlas <- normalize_height(las, tin(), dtm = dtm)
+summary(filter_ground(nlas)$Z)
